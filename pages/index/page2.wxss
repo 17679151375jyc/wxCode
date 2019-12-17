@@ -1,0 +1,55 @@
+.yuanbao1{
+  position: absolute;
+  width: 32vw;
+  height: 32vw;
+  bottom: 20%;
+  right: 1%;
+  animation: 1s linear infinite;
+  /* animation-name: cai2; */
+  z-index: 220;
+}
+.scro{
+  position: absolute;
+  width: 45vw;
+  top: 3%;
+  left: 20%;
+  transform: rotate(-10deg);
+  z-index: 210;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 1.5vw;
+}
+.myVideo_css{
+  position: absolute;
+  width: 100%;
+  top: 43%;
+  border: 1vw solid #fff;
+}
+.backImg{
+  width: 100%;
+  height: 100%;
+}
+.cai2{
+  position: absolute;
+  bottom: 0%;
+  left: -10%;
+  width: 60vw;
+  height: 50vw;
+  z-index: 200;
+  /* animation: 1s linear infinite; */
+  /* animation-name: cai2; */
+  /* transform: scale(0); */
+}
+@keyframes cai2{
+  0%{transform: scale(1)}
+  50%{transform: scale(1.2)}
+  100%{transform: scale(1)}
+}
+.jupai{
+  position: absolute;
+  right: 2%;
+  bottom: 4.5%;
+  width: 49vw;
+  height: 41vw;
+  transform: skew(-3deg);
+}

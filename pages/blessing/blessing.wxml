@@ -1,0 +1,59 @@
+<view>
+  <!-- <view class="blessing_css" style="background-color: yellow"></view> -->
+  <view class="but_css" style='height:{{heightValue/15}}px;line-height:{{heightValue/15}}px;'>
+    <view bindtap="xinClick" data-num='0' class="{{current == 0 ? 'xinnain':''}}">新年祝福</view>
+    <view bindtap="xinClick" data-num='1' class="{{current == 1 ? 'xinnain':''}}">分享祝福</view>
+  </view>
+  <swiper style='height: {{heightValue - (heightValue/15)}}px;' current="{{current}}" bindchange="bindchangeClick">
+    <block>
+      <swiper-item>
+        <scroll-view  
+          scroll-y="true" 
+          style='height: {{heightValue - (heightValue/15)}}px;background-color:#FEFED6'>
+          <view 
+            class="img_css" 
+            wx:for="{{textList}}" 
+            wx:key="{{index}}" 
+            style="background: url('{{urlHost}}img/kuang4.jpg');background-size:cover;">
+            <!-- <image class="kuang4" src="{{urlHost}}img/kuang4.jpg"></image> -->
+            <!-- <view  class="kuang4 back"> -->
+              <view class="hei_css">{{item.text}}</view>
+              <view class="text2_css">
+                <image class='touxiang' src="{{item.pathUrl}}"></image>
+                <!-- <image class="sex_css" src="{{urlHost}}img/nan.png"></image> -->
+                <image 
+                  class="sex_css" 
+                  src="{{item.gender==1?(urlHost+'img/nan.png'):(urlHost+'img/nv.png')}}"></image>
+                <text>—{{item.name}}</text>
+              </view>
+            <!-- </view> -->
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+    <block>
+      <swiper-item>
+        <view 
+          class="wode_css" 
+          style="height:{{heightValue - (heightValue/15)}}px;background: url('{{urlHost}}img/back4.jpg');background-size: cover;">
+          <view class="box_hr_css"></view>
+            <form bindsubmit="bindFormSubmit" class="form_css">
+              <textarea
+                name="textarea"
+                value='{{valueText}}'
+                style="background: url('{{urlHost}}img/kuang2.png');background-size: 100% 113%;height:{{heightValue/4.3}}px;background-position:0 -3vw"
+                class="textarea_css" 
+                maxlength='60' 
+                placeholder="请在这里留下您的新年祝福吧（最多60个字）" 
+                placeholder-class="placeholder_css"/>
+              <button form-type="submit" class="fenxiang_css"> 分享 </button>
+              <button class="qing_css" bindtap="qingClick"> 清空 </button>
+              <!-- <button class="qing_css" open-type="getUserInfo"> 清空 </button> -->
+            </form>
+            <image class="yun_css" src="{{urlHost}}img/yun1.png"></image>
+            <image class="yun_css pao_css" src="{{urlHost}}img/24.gif"></image>
+          </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

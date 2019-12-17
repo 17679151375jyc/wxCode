@@ -1,0 +1,109 @@
+@import "./page1.wxss";
+@import "./page2.wxss";
+@import "./page3.wxss";
+.audio_css{
+  position: absolute;
+  top: 28%;
+  width: 80vw;
+  z-index: 30000;
+}
+.yinyue_box{
+  position: absolute;
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  top: 20%;
+  right: -2vw;
+  opacity: 0;
+}
+.yinyue{
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  top: 20%;
+  right: -2vw;
+  background-color: #FBFB2E;
+  border-radius: 50%;
+  border: 1vw solid #E4AB03;
+  opacity: 0.8;
+  animation: 3s linear infinite;
+  animation-name: yinyue;
+}
+.tiper{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 25000;
+}
+@keyframes yinyue{
+  0%{transform: rotate(0)}
+  100%{transform: rotate(360deg)}
+}
+.swiper_css{
+  width: 100%;
+  /* height: 725px; */
+  background-color: red;
+}
+.abc{
+  width: 100%;
+  height: 100%;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2000;
+  text-align: center;
+  color: #fff;
+  height: 6vw;
+  line-height: 2vw;
+}
+.ani_text{
+  animation: ani_text 1s linear infinite;
+  opacity: 0.7;
+  display: inherit;
+  font-weight: bold;
+}
+@keyframes ani_text{
+  0%{ color: #fff; font-size: 16px; }
+  50%{ color:  yellow; font-size: 23px; }
+  100%{ color: #fff; font-size: 16px; }
+}
+.view_swiper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.mulian{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  animation:  2s linear normal;
+}
+.mu1{
+  animation-name: mulian1;
+  animation-fill-mode: forwards;
+  left: 0;
+}
+.mu2{
+  animation-name: mulian2;  
+  animation-fill-mode: forwards;
+  right: 0;
+}
+@keyframes mulian1{
+  0%{top:0;}
+  100%{left: -100%}
+}
+@keyframes mulian2{
+  0%{top:0;}
+  100%{right: -100%}
+}
+.page_css{
+  width: 100%;
+  height: 100%;
+}

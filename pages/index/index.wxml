@@ -1,0 +1,149 @@
+<view>
+  <image class="mulian mu1" src="{{urlHost}}img/mu3.png" style='height:{{heightValue}}px;'></image>
+  <image class="mulian mu2" src="{{urlHost}}img/mu2.png" style='height:{{heightValue}}px;'></image>
+  <view class="footer" wx:if='{{pageShow}}'>
+    <text class="ani_text">︽  ︽  ︽</text>
+  </view>
+  <swiper 
+    indicator-color='#fff' 
+    class="swiper_css" 
+    vertical='true' 
+    bindchange='bindchangeClick' 
+    style='height:{{heightValue}}px;'>
+
+    <block>
+      <swiper-item class='abc'>
+        <view 
+          class="view_swiper" 
+          style="background: url('{{urlHost}}img/back3.jpg');background-size: cover;background-position: 10% -100px;">
+          <view class="page_css">
+            <view class="text_css text1" style='animation-name: text1;'>过</view>
+            <view class="text_css text2" style='animation-name: text1;'>年</view>
+            <view class="text_css text3" style='animation-name: text1;'>啦</view>
+            <view class="text_css text4">新年快乐</view>
+            <view class="cai_box"></view>
+            <image class="cai" src="{{urlHost}}img/cai.png"></image>
+            <view class="box_footer" wx:if="{{true}}">
+              <scroll-view 
+                class="div_box" 
+                scroll-x='true'
+                bindscroll="bindscrollClick">                
+                <view style='width:{{widthValue}}vw;height:100%;'>
+                  <image 
+                    wx:for="{{listImg}}" 
+                    wx:key='index' 
+                    src="{{item}}" 
+                    bindtap="imgClick"
+                    data-index="{{index}}"
+                    class='img_box_css' ></image>
+                </view>
+              </scroll-view>
+            </view>
+            <view 
+              class='jinbi' 
+              style="background: url('{{urlHost}}img/jinbi.png');background-size: cover;"
+              bindtap="link_path">                
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+
+    <block>
+      <swiper-item class='abc'>
+        <view class="view_swiper" style="background: url('{{urlHost}}img/back2.jpg');background-size: cover">   
+          <view wx:if="{{page2}}">
+            <image 
+              class="cai2" 
+              wx:if="{{page2}}" 
+              src="{{urlHost}}img/cai2.png"></image>
+            <view class="scro" wx:if="{{page2}}" style="height:{{heightValue/2.8}}px">
+              <swiper 
+                class="backImg" 
+                autoplay 
+                interval='2000' 
+                duration="1000" 
+                easing-function='easeInOutCubic'>
+                <block 
+                  wx:for="{{listImg}}" 
+                  wx:key="index" 
+                  class="backImg">
+                  <swiper-item>
+                    <image 
+                      src="{{item}}" 
+                      class="backImg"
+                      bindtap="imgClick1"
+                      data-index="{{index}}"></image>
+                  </swiper-item>
+                </block>
+              </swiper>
+            </view>
+            <video 
+              id="myVideo" 
+              style="height:{{heightValue/3.6}}px;"
+              class="myVideo_css"
+              title="给您拜年啦"
+              poster="{{urlHost}}img/1.jpg"
+              src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" 
+              show-fullscreen-btn
+              show-play-btn
+              show-center-play-btn
+              enable-progress-gesture
+              show-mute-btn
+              nable-play-gesture
+              enable-danmu
+              bindplay='bindVideoplayClick1'
+              bindpause="bindVediopauseClick1"
+              controls></video>
+          </view>
+          <image wx:if="{{page2}}" class="deng1_box" src="{{urlHost}}img/16.gif"></image>
+          <image class="jupai" src="{{urlHost}}img/jupai.png"></image>
+        </view>
+      </swiper-item>
+    </block>
+
+    <block>
+      <swiper-item class='abc'>
+        <view class="view_swiper" style="background: url('{{urlHost}}img/back1.jpg');background-size: cover;">
+          <view class="kuang1" style="background: url('{{urlHost}}img/kuang1.png');background-size: cover;" wx:if="{{page3}}">
+            <view style="font-size: 8vw;color: red;font-family: '华文行楷';font-weight: bold;">迎春</view>
+            <view style="margin:2vw 5vw 0 0;font-size: 5vw">☺☺☺</view>
+            <view style="margin:2vw 12vw 0 0;font-size: 4vw">{{timeValue}} {{hourValue}}</view>
+          </view>
+          <image class="shu4" src="{{urlHost}}img/shu4.png"></image>
+          <view wx:if='page3' class='zi_box_css'>
+            <view class="zi1" style='animation-name: {{page3Animation}}'>
+              <view wx:for="{{verse1}}" wx:key="index">{{item}}</view>
+            </view>
+            <view class="zi1 zi2" style='animation-name: {{page3Animation}}'>
+              <view wx:for="{{verse2}}" wx:key="index">{{item}}</view>
+            </view>
+            <view class="zi1 zi3" style='animation-name: {{page3Animation}}'>
+              <view wx:for="{{verse3}}" wx:key="index">{{item}}</view>
+            </view>
+            <view class="zi1 zi4" style='animation-name: {{page3Animation}}'>
+              <view wx:for="{{verse4}}" wx:key="index">{{item}}</view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+    
+  </swiper>
+  <image bindtap="yinyueClick" class="yinyue" src='{{urlHost}}/img/yinyue.png' style="animation-play-state: {{aniStatus}}"></image>
+  <view class="yinyue_box" wx:if="{{yinStatus}}" bindtap="yinClick"></view>
+  <!-- <audio 
+    src="{{urlHost}}mp3/凤凰传奇 - 拜新年.mp3" 
+    name="拜新年.mp3"
+    poster="{{urlHost}}img/1.jpg"
+    bindplay='bindplayClick'
+    bindpause='bindpauseClick'
+    id='myAudio' 
+    style='right: -{{rightValue}}vw;'
+    action="{{myAudio}}" 
+    controls='true' 
+    class="audio_css"
+    author='凤凰传奇'
+    loop='true'></audio>
+  <view class='tiper' wx:if='{{tiperShow}}' bindtap="tiperClick"></view> -->
+</view>

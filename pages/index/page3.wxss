@@ -1,0 +1,55 @@
+.kuang1{
+  position: absolute;
+  width: 57vw;
+  left: calc(50% - 40vw);
+  height: 15vw;
+  text-align: right;
+  bottom: 10%;
+  transform: rotate(-10deg);
+  padding: 10vw 14vw 14vw 15vw;
+  color: #938513;
+  font-size: 6vw;
+}
+.shu4{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 12%;
+  right: 0%;
+  animation: 1s linear infinite;
+  animation-name: shu4;
+  z-index: 200;
+}
+@keyframes shu4{
+  0%{transform: scale(1)}
+  50%{transform: scale(1.1)}
+  100%{transform: scale(1)}
+}
+.zi1{
+  position: absolute;
+  top:7%;
+  right: 24%;
+  opacity: 0;
+  font-size: 9.3vw;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: #EED405; 
+  -webkit-text-stroke: 0.1px #fff; 
+  animation: 1s linear normal;
+  font-weight: bold;
+  font-family: '华文行楷';
+  /* animation-name: zi1; */
+  animation-fill-mode: forwards;
+}
+.zi2{
+  right: 38%;
+}
+.zi3{
+  right: 52%;
+}
+.zi4{
+  right: 66%;
+}
+@keyframes zi1{
+  0%{transform: scale(1.8);opacity: 0;}
+  100%{transform: scale(1);opacity: 1;}
+}

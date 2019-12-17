@@ -1,0 +1,38 @@
+<view>
+  <view 
+    style="height:{{heightValue}}px;width:100%;background: url('{{urlHost}}img/8.jpg');background-size:cover;"
+    >
+      <navigator url="../blessing/blessing" open-type="navigate">
+        <view class="logo chunjie">
+          <image src='{{urlHost}}/img/logo1.png'></image>
+          <text>春节祝福</text>
+        </view>
+      </navigator>
+      <navigator url="../photoPage/photoPage" open-type="navigate">
+        <view class="logo siren">
+          <image src='{{urlHost}}/img/logo2.png'></image>
+          <text>新年趣事</text>
+        </view>
+      </navigator>
+      <navigator url="../footPrint/footPrint" open-type="navigate">
+        <view class="logo yanguan">
+          <image src='{{urlHost}}/img/logo3.png'></image>
+          <text>留下足迹</text>
+        </view>
+      </navigator>
+      <navigator url="../privacy/privacy" open-type="navigate">
+        <view class="logo liuxia">
+          <image src='{{urlHost}}/img/logo4.png'></image>
+          <text>私人空间</text>
+        </view>
+      </navigator>
+      <navigator url="../aboutMe/aboutMe" open-type="navigate">
+        <view class="logo guanyu">
+          <image src='{{urlHost}}/img/logo5.png'></image>
+          <text>关于我</text>
+        </view>
+      </navigator>
+    </view>
+    <image class="apple" src="{{urlHost}}/img/apple.png"></image>
+    <image class="shu3" src="{{urlHost}}/img/shu3.gif"></image>
+</view>

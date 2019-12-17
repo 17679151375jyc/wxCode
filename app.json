@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/blessing/blessing",
+    "pages/privacy/privacy",
+    "pages/photoPage/photoPage",
+    "pages/footPrint/footPrint",
+    "pages/aboutMe/aboutMe"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F60303",
+    "navigationBarTitleText": "新年快乐",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ]
+}
