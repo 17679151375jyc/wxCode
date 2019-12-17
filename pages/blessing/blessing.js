@@ -15,7 +15,7 @@ Page({
         gender: 1,
         text: '除夕盛宴，温馨话甘甜，欢乐喜庆笑颜，新春吉祥共祝愿，万事如意勤劳挣钱，福禄寿禧康泰艳阳天，歌盛世幸福生活乐无边。',
         name: 'Jyc',
-        pathUrl: urlHost + 'img/' + '1' + '.jpg',
+      pathUrl: urlHost + 'img/' + 'back_div' + '.jpg',
     }]
   },
   xinClick: function(e){
