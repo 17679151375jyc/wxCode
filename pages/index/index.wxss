@@ -22,10 +22,10 @@
   height: 8vw;
   top: 20%;
   right: -2vw;
-  background-color: #FBFB2E;
+  background-color: #fff;
   border-radius: 50%;
-  border: 1vw solid #E4AB03;
-  opacity: 0.8;
+  border: 1vw solid #F60303;
+  opacity: 0.7;
   animation: 3s linear infinite;
   animation-name: yinyue;
 }
@@ -64,14 +64,14 @@
 }
 .ani_text{
   animation: ani_text 1s linear infinite;
-  opacity: 0.7;
+  opacity: 0.8;
   display: inherit;
   font-weight: bold;
 }
 @keyframes ani_text{
-  0%{ color: #fff; font-size: 16px; }
-  50%{ color:  yellow; font-size: 23px; }
-  100%{ color: #fff; font-size: 16px; }
+  0%{ color: #fff; font-size: 12px; }
+  50%{ color:  yellow; font-size: 14px; }
+  100%{ color: #fff; font-size: 12px; }
 }
 .view_swiper{
   width: 100%;
@@ -89,11 +89,13 @@
   animation-name: mulian1;
   animation-fill-mode: forwards;
   left: 0;
+  z-index: 5000;
 }
 .mu2{
   animation-name: mulian2;  
   animation-fill-mode: forwards;
   right: 0;
+  z-index: 5000;
 }
 @keyframes mulian1{
   0%{top:0;}

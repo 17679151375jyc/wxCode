@@ -1,1 +1,5 @@
-<view>该页面暂未开发</view>
+<view>
+  <view class="box_css" style="background: url('{{urlHost}}img/6.jpg');background-size: cover;height:{{heightValue}}px"></view>
+  <view class="meng_css" style="height: {{heightValue/1.5}}px">这是是关于次小程序的由来，创造经历， 以及开发人员的描述</view>
+  <view class="footer">版权归:[余心]微信：17679151375jyc所有</view>
+</view>

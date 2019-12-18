@@ -1,1 +1,30 @@
-/* pages/aboutMe/aboutMe.wxss */
+.box_css{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.meng_css{
+  position: absolute;
+  left: 5vw;
+  width: 60vw;
+  /* right: 10vw; */
+  top: 20vw;
+  background-color: #fff;
+  border-radius: 2.17vw;
+  padding: 5vw;
+  opacity: 0.8;
+  writing-mode: vertical-rl;
+  font-size: 5.8vw;
+  color: #6A4904;
+  letter-spacing: 1vw;
+  font-family: '华文行楷';
+}
+.footer{
+  position: absolute;
+  bottom: 1%;
+  text-align: right;
+  right: 0;
+  left: 0;
+  font-size: 3.17vw;
+}

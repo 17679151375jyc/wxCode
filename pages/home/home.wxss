@@ -1,7 +1,7 @@
 .logo{
   position: absolute;
   width: 25vw;
-  height: 23vw;
+  height: 30vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,9 +15,8 @@
   animation-name: logo;
 }
 .logo image{
-  width: 20vw;
-  height: 20vw;
-  margin-bottom: 2vw;
+  width: 100%;
+  height: 100%;
 }
 @keyframes logo{
   0%{transform: translateY(0vw) rotate(-10deg)}
@@ -32,11 +31,11 @@
   background-position: 50% 50%;
 }
 .siren{
-  left: 0;
+  left: 2%;
   top: 28%;
 }
 .yanguan{
-  right: 0;
+  right: 2%;
   top: 28%;
 }
 .liuxia{
@@ -51,19 +50,9 @@
   width: 30vw;
   height: 30vw;
   left: calc(50% - 15vw);
-  top: 28%;
+  top: 33%;
   position: absolute;
-  animation: 12s linear infinite;
-  animation-name: apple;
-}
-@keyframes apple{
-  0%{transform: rotate(0deg)}
-  25%{transform: rotate(360deg)}  
-  40%{transform: rotate(360deg) scale(1.3)}
-  50%{transform: rotate(360deg)}
-  75%{transform: rotate(0deg)}
-  90%{transform: rotate(0deg) scale(1.3)}
-  100%{transform: rotate(0deg)}
+  transform: scale(1.3);
 }
 .shu3{
   width: 30vw;

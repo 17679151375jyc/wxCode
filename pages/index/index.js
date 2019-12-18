@@ -9,6 +9,7 @@ Page({
     this.audioCtx = wx.createAudioContext('myAudio')
   },
   data: {
+    muShow: true,
     timeValue: '',
     hourValue: '',
     textValueTime: '',
@@ -183,7 +184,7 @@ Page({
           //   }
           // })
           wx.setBackgroundColor({
-            backgroundColor: '#F60303', // 默认窗口的背景色
+            // backgroundColor: '#F60303', // 默认窗口的背景色
           })
           that.setData({//播放器（废弃）
             myAudio: {
@@ -200,5 +201,10 @@ Page({
         hourValue: hourValue
       })
     }, 1000)
+    setTimeout(()=>{
+      that.setData({
+        muShow: false
+      })
+    }, 2500)
   }
 })

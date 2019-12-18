@@ -35,7 +35,7 @@ App({
     })
     wx.getSystemInfo({
       success: function (res) {
-        that.globalData.heightValue = (res.safeArea.height - res.safeArea.top - 25)
+        that.globalData.heightValue = (res.safeArea.height - res.safeArea.top)
       }
     })
   },

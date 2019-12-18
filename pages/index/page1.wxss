@@ -6,8 +6,8 @@
   -webkit-text-fill-color:transparent; 
   opacity: 0;
   position: absolute;
-  top: 20%;
-  left: calc(50% - 20vw);
+  top: 22%;
+  left: calc(50% - 22vw);
   -webkit-text-stroke: 4px yellow;  
   animation-fill-mode: forwards;
   font-family: '华文行楷';
@@ -16,7 +16,7 @@
   background-image:-webkit-linear-gradient(bottom,red,#fd8403,yellow); 
   animation: 1s linear normal;
   /* animation-name: text1; */
-  animation-delay: 3s;
+  animation-delay: 2.5s;
 }
 @keyframes text1{
   0%{opacity: 0;}
@@ -26,12 +26,12 @@
 .text2{
   background-image:-webkit-linear-gradient(bottom,red,#fd8403,yellow); 
   animation: text1 1s linear normal;
-  animation-delay: 4s;
+  animation-delay: 3.5s;
 }
 .text3{
   background-image:-webkit-linear-gradient(bottom,red,#fd8403,yellow); 
-  animation: text1 2s linear normal;
-  animation-delay: 5s;
+  animation: text1 4s linear normal;
+  animation-delay: 4.5s;
 }
 .text4{
   background-image:-webkit-linear-gradient(bottom,red,#fff,yellow); 
@@ -39,7 +39,7 @@
   opacity: 0;
   animation: 1s linear infinite;
   animation-name: text4;
-  animation-delay: 7s;
+  animation-delay: 6.5s;
   animation-fill-mode: forwards;
   position: absolute;
   font-size: 18vw;
@@ -70,46 +70,30 @@
   100%{top: 30%;left: 0;opacity: 1;}
 }
 .cai_box{
-  background-color: #E8FD06;
-  box-shadow: 0px 0px 50px 10px #E8FD06;
-  width: 44vw;
-  height: 44vw;
+  /* box-shadow: 0 0 50px 0 yellow; */
+  background-color: #fff;
+  width: 36vw;
+  height: 36vw;
   z-index: 200;
   position: absolute;
-  top: 30%;
+  top: 20%;
   border-radius: 50%;
   left: calc(50% - 22vw);
-  animation: 1s linear normal;  
-  /* animation-name: cai_box; */
-  transform: scale(0);
-  animation-fill-mode: forwards;
   opacity: 0;
-  animation-delay: 7s;
+  animation: cai_box 1.5s linear normal;
+  animation-fill-mode: forwards;
+  animation-delay: 6.5s;
+  border: 5.07vw solid #E1C3D8;
 }
 @keyframes cai_box{
-  0%{ transform: scale(0);opacity: 0; }
-  100%{transform: scale(1.5);opacity: 1;}
+  0%{opacity: 0}
+  100%{opacity: 1;}
 }
-.cai{
-  width: 50vw;
-  height: 50vw;
-  transform: scale(1.5);
+.twoshu{
   position: absolute;
-  top: 30%;
-  left: calc(50% - 25vw);
-  opacity: 0;
-  animation: 3s linear infinite;  
-  /* animation-name: cai; */
-  transform-origin: center bottom;
-  animation-delay: 8s;
-  z-index: 200;
-}
-@keyframes cai{
-  0%{transform: scale(1.5) rotate(0deg); opacity: 1;}
-  25%{transform: scale(1.5) rotate(-10deg); opacity: 1;}
-  50%{transform: scale(1.5) rotate(0deg); opacity: 1;}
-  75%{transform: scale(1.5) rotate(10deg); opacity: 1;}
-  100%{transform: scale(1.5) rotate(0deg); opacity: 1;}
+  bottom: 50vw;
+  width: 90%;
+  left: 5%;
 }
 .box_footer{
   position: absolute;
@@ -143,17 +127,19 @@
 .jinbi{
   width: 20vw;
   height: 20vw;
-  bottom: 65vw;
-  right: 1%;
-  z-index: 2400;
+  top: 0%;
+  right: -2vw;
+  z-index: 1000;
   position: absolute;
-  animation: jinbi 0.5s linear infinite;
+  /* animation: jinbi 0.5s linear infinite; */
   font-weight: bold;
-  transform: rotate(10deg);
+  /* transform: rotate(10deg); */
   text-align: center;
-  line-height: 25vw;
-  color: #EC8F0C;
-  font-size: 5vw;
+  line-height: 22vw;
+  font-size: 5.12vw;
+  color: transparent;
+  -webkit-text-fill-color: #665B04;/*文字的填充色*/
+  -webkit-text-stroke: 1px #fff;
 }
 @keyframes jinbi{
   0%{transform: scale(1)}

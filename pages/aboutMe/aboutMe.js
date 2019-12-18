@@ -1,11 +1,14 @@
 // pages/aboutMe/aboutMe.js
+const app = getApp();
+const urlHost = app.globalData.urlHost;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    urlHost: urlHost,
+    heightValue: app.globalData.heightValue,
   },
 
   /**

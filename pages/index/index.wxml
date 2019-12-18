@@ -1,15 +1,20 @@
 <view>
-  <image class="mulian mu1" src="{{urlHost}}img/mu3.png" style='height:{{heightValue}}px;'></image>
-  <image class="mulian mu2" src="{{urlHost}}img/mu2.png" style='height:{{heightValue}}px;'></image>
+   <view 
+    class='jinbi' 
+    style="background: url('{{urlHost}}img/jinbi2.png');background-size: cover;"
+    bindtap="link_path"></view>
+  <image wx:if="{{muShow}}" class="mulian mu1" src="{{urlHost}}img/mu3.png" style='height:{{heightValue}}px;'></image>
+  <image wx:if="{{muShow}}" class="mulian mu2" src="{{urlHost}}img/mu2.png" style='height:{{heightValue}}px;'></image>
   <view class="footer" wx:if='{{pageShow}}'>
-    <text class="ani_text">︽  ︽  ︽</text>
+    <text class="ani_text">︽ 向 ︽ 上 ︽ 滑 ︽ 动 ︽</text>
   </view>
   <swiper 
+
     indicator-color='#fff' 
     class="swiper_css" 
     vertical='true' 
     bindchange='bindchangeClick' 
-    style='height:{{heightValue}}px;'>
+    style='height:{{heightValue}}px;background-color: rgba(246,3,3, 0.8);'>
 
     <block>
       <swiper-item class='abc'>
@@ -21,8 +26,8 @@
             <view class="text_css text2" style='animation-name: text1;'>年</view>
             <view class="text_css text3" style='animation-name: text1;'>啦</view>
             <view class="text_css text4">新年快乐</view>
-            <view class="cai_box"></view>
-            <image class="cai" src="{{urlHost}}img/cai.png"></image>
+            <!-- <view class="cai_box"></view> -->
+            <image class="twoshu" src="{{urlHost}}img/twoshu.png"></image>
             <view class="box_footer" wx:if="{{true}}">
               <scroll-view 
                 class="div_box" 
@@ -38,11 +43,6 @@
                     class='img_box_css' ></image>
                 </view>
               </scroll-view>
-            </view>
-            <view 
-              class='jinbi' 
-              style="background: url('{{urlHost}}img/jinbi.png');background-size: cover;"
-              bindtap="link_path">                
             </view>
           </view>
         </view>
@@ -63,7 +63,7 @@
                 autoplay 
                 interval='2000' 
                 duration="1000" 
-                easing-function='easeInOutCubic'>
+                >
                 <block 
                   wx:for="{{listImg}}" 
                   wx:key="index" 
@@ -106,8 +106,8 @@
       <swiper-item class='abc'>
         <view class="view_swiper" style="background: url('{{urlHost}}img/back1.jpg');background-size: cover;">
           <view class="kuang1" style="background: url('{{urlHost}}img/kuang1.png');background-size: cover;" wx:if="{{page3}}">
-            <view style="font-size: 8vw;color: red;font-family: '华文行楷';font-weight: bold;">迎春</view>
-            <view style="margin:2vw 5vw 0 0;font-size: 5vw">☺☺☺</view>
+            <view style="font-size: 8vw;color: #ECD623;font-family: '华文行楷';font-weight: bold;">迎春</view>
+            <view style="margin:2vw 5vw 0 0;font-size: 5vw"><text style="font-size: 3.74vw;">笑口常开哦</text>☺☺☺</view>
             <view style="margin:2vw 12vw 0 0;font-size: 4vw">{{timeValue}} {{hourValue}}</view>
           </view>
           <image class="shu4" src="{{urlHost}}img/shu4.png"></image>
