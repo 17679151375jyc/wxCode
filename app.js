@@ -33,7 +33,7 @@ App({
         }
       }
     })
-    wx.getSystemInfo({
+    wx.getSystemInfo({//获取设备窗口高度
       success: function (res) {
         that.globalData.heightValue = (res.safeArea.height - res.safeArea.top)
       }

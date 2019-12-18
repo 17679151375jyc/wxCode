@@ -9,6 +9,7 @@ Page({
     this.audioCtx = wx.createAudioContext('myAudio')
   },
   data: {
+    hengfuShow: false,
     muShow: true,
     timeValue: '',
     hourValue: '',
@@ -173,18 +174,19 @@ Page({
         that.setData({
           widthValue: that.data.listImg.length * 33.333 + (that.data.listImg.length+1)
         })
-          // wx.playBackgroundAudio({//背景音乐
-          //   dataUrl: that.data.urlHost + 'mp3/邓紫棋-句号.mp3',
-          //   title: '句号',
-          //   coverImgUrl: that.data.urlHost + 'img/juhao.jpg',
-          //   success(res) {
-          //     that.setData({
-          //       aniStatus: 'running'
-          //     })
-          //   }
-          // })
-          wx.setBackgroundColor({
-            // backgroundColor: '#F60303', // 默认窗口的背景色
+          wx.playBackgroundAudio({//背景音乐
+            dataUrl: that.data.urlHost + 'mp3/juhao.mp3',
+            title: '句号',
+            coverImgUrl: that.data.urlHost + 'img/juhao.jpg',
+            success(res) {
+              that.setData({
+                aniStatus: 'running'
+              })
+            },
+            onEnded(){
+              console.log('从新来')          
+              backgroundAudioManager.play();
+            }
           })
           that.setData({//播放器（废弃）
             myAudio: {
@@ -206,5 +208,10 @@ Page({
         muShow: false
       })
     }, 2500)
+    setTimeout(()=>{
+      that.setData({
+        hengfuShow: true
+      })
+    }, 5000)
   }
 })

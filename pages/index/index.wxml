@@ -26,7 +26,11 @@
             <view class="text_css text2" style='animation-name: text1;'>年</view>
             <view class="text_css text3" style='animation-name: text1;'>啦</view>
             <view class="text_css text4">新年快乐</view>
-            <!-- <view class="cai_box"></view> -->
+            <!-- <view class="cai_box" style='width: {{heightValue/6}}px;height: {{heightValue/6}}px;left: calc(50% - {{heightValue/9}}px);'></view> -->
+            <view 
+              class='hengfu' 
+              style="top:{{heightValue/13}}px"
+              wx:if="{{hengfuShow}}"></view>
             <image class="twoshu" src="{{urlHost}}img/twoshu.png"></image>
             <view class="box_footer" wx:if="{{true}}">
               <scroll-view 

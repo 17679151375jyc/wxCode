@@ -30,7 +30,7 @@
 }
 .text3{
   background-image:-webkit-linear-gradient(bottom,red,#fd8403,yellow); 
-  animation: text1 4s linear normal;
+  animation: text1 2s linear normal;
   animation-delay: 4.5s;
 }
 .text4{
@@ -69,16 +69,28 @@
   0%{top: 0; left: 0;}
   100%{top: 30%;left: 0;opacity: 1;}
 }
+.hengfu{
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  height: 26vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: hengfu 1s linear normal;
+  animation-fill-mode: forwards;
+}
+@keyframes hengfu{
+  0%{left: -100%}
+  100%{left: 0%}
+}
 .cai_box{
   /* box-shadow: 0 0 50px 0 yellow; */
   background-color: #fff;
-  width: 36vw;
-  height: 36vw;
+  /* width: 36vw;
+  height: 36vw; */
   z-index: 200;
   position: absolute;
   top: 20%;
   border-radius: 50%;
-  left: calc(50% - 22vw);
   opacity: 0;
   animation: cai_box 1.5s linear normal;
   animation-fill-mode: forwards;
@@ -127,8 +139,8 @@
 .jinbi{
   width: 20vw;
   height: 20vw;
-  top: 0%;
-  right: -2vw;
+  top: 28%;
+  right: -3vw;
   z-index: 1000;
   position: absolute;
   /* animation: jinbi 0.5s linear infinite; */

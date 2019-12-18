@@ -20,7 +20,7 @@
   position: absolute;
   width: 8vw;
   height: 8vw;
-  top: 20%;
+  bottom: 65vw;
   right: -2vw;
   background-color: #fff;
   border-radius: 50%;

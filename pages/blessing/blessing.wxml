@@ -13,7 +13,7 @@
           <view 
             class="img_css" 
             wx:for="{{textList}}" 
-            wx:key="{{index}}" 
+            wx:key="*this" 
             style="background: url('{{urlHost}}img/kuang4.jpg');background-size:cover;">
             <!-- <image class="kuang4" src="{{urlHost}}img/kuang4.jpg"></image> -->
             <!-- <view  class="kuang4 back"> -->
@@ -24,7 +24,7 @@
                 <image 
                   class="sex_css" 
                   src="{{item.gender==1?(urlHost+'img/nan.png'):(urlHost+'img/nv.png')}}"></image>
-                <text>—{{item.name}}</text>
+                <text style="font-family: ''">—{{item.name}}</text>
               </view>
             <!-- </view> -->
           </view>
