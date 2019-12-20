@@ -23,7 +23,7 @@
 .footer{
   position: absolute;
   bottom: 1%;
-  text-align: right;
+  text-align: center;
   right: 0;
   left: 0;
   font-size: 3.17vw;

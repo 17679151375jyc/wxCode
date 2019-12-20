@@ -6,7 +6,7 @@
   <view class="zhufutan" wx:if="{{purpleShow}}">
     <view class="tan_kuang" style="background: url('{{urlHost}}img/tanchuang.png');background-size: 100% 100%;">
       <icon type="clear" size="40" color="#F8C02E" bindtap="tankuang"/>
-      <view class="box_title">收到的祝福</view>
+      <view class="box_title">给你的祝福</view>
       <view class="tan_li_box">{{zhuFuListValue}}</view>
     </view>
   </view>
@@ -34,7 +34,6 @@
             <!-- 新年快乐白色背景 -->
             <view 
               class='hengfu' 
-              style="top:{{heightValue/13}}px"
               wx:if="{{hengfuShow}}"></view>
             <view class="text_css text4">新年快乐</view>
             <image bindtap="shuJuPaiClick" class="shujupai" src="{{urlHost}}img/11.gif" style="top:{{heightValue/4}}px"></image>
@@ -83,7 +82,7 @@
                 duration="1000" 
                 >
                 <block 
-                  wx:for="{{listImg}}" 
+                  wx:for="{{listImg1}}" 
                   wx:key="index" 
                   class="backImg">
                   <swiper-item>
@@ -101,8 +100,8 @@
               style="height:{{heightValue/3.6}}px;"
               class="myVideo_css"
               title="给您拜年啦"
-              poster="{{urlHost}}img/1.jpg"
-              src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" 
+              poster="{{urlHost}}img/juhao.jpg"
+              src="{{urlHost}}vedio/juhao.mp4" 
               show-fullscreen-btn
               show-play-btn
               show-center-play-btn

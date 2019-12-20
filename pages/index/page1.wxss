@@ -43,7 +43,7 @@
   animation-fill-mode: forwards;
   position: absolute;
   font-size: 18vw;
-  top: 10%;
+  top: 8.5%;
   left: calc(50% - 35vw);
   font-family: '华文行楷';
 }
@@ -72,6 +72,7 @@
 .hengfu{
   width: 100%;
   position: absolute;
+  top: 10vw;
   z-index: 20;
   height: 26vw;
   background-color: rgba(255, 255, 255, 0.5);
@@ -146,13 +147,11 @@
 .jinbi{
   width: 20vw;
   height: 20vw;
-  top: 28%;
+  top: 24%;
   right: -3vw;
   z-index: 1000;
   position: absolute;
-  /* animation: jinbi 0.5s linear infinite; */
   font-weight: bold;
-  /* transform: rotate(10deg); */
   text-align: center;
   line-height: 22vw;
   font-size: 5.12vw;

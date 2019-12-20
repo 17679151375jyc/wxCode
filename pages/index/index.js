@@ -23,17 +23,7 @@ Page({
       method: 'pause',
     },  
     verse: [],
-    listImg: [
-      urlHost + 'img/' + 'nian1.jpg',
-      urlHost + 'img/' + 'nian2.jpg',
-      urlHost + 'img/' + 'nian3.jpg',
-      urlHost + 'img/' + 'nian4.jpg',
-      urlHost + 'img/' + 'nian5.jpg',
-      urlHost + 'img/' + 'nian6.jpg',
-      urlHost + 'img/' + 'nian7.jpg',
-      urlHost + 'img/' + 'nian8.jpg',
-      urlHost + 'img/' + 'nian3.jpg'
-    ],
+    listImg: [],
     listImg1: [
       urlHost + 'img/' + 'nian1.jpg',
       urlHost + 'img/' + 'nian2.jpg',
@@ -184,18 +174,22 @@ Page({
     // console.log(e.detail.scrollLeft)
   },
   onLoad: function () {
-    console.log(dataValue.animaText)
     let that = this;
     wx.getSystemInfo({
       success: function(res){
-        console.log(res.safeArea)
-        that.setData({
-          widthValue: that.data.listImg.length * 33.333 + (that.data.listImg.length+1)
+        let num = dataValue.listImg.length
+        console.log(dataValue.listImg.length)
+        that.setData({   
+          animaText: dataValue.animaText,//移动的横幅文字
+          zhuFuList: dataValue.zhuFuList,//随机祝福
+          verse: dataValue.verse,//诗句
+          listImg: dataValue.listImg,//图片组
+          widthValue: num * 34.333 + 1, 
         })
           wx.playBackgroundAudio({//背景音乐
-            // dataUrl: that.data.urlHost + 'mp3/juhao.mp3',
+            dataUrl: urlHost + 'mp3/juhao.mp3',
             title: '句号',
-            coverImgUrl: that.data.urlHost + 'img/juhao.jpg',
+            coverImgUrl: urlHost + 'img/juhao.jpg',
             success(res) {
               that.setData({
                 aniStatus: 'running'
@@ -216,9 +210,6 @@ Page({
       that.setData({
         timeValue: timeValue,
         hourValue: hourValue,
-        animaText: dataValue.animaText,//移动的横幅文字
-        zhuFuList: dataValue.zhuFuList,//随机祝福
-        verse: dataValue.verse//诗句
       })
     }, 1000)
     setTimeout(()=>{
