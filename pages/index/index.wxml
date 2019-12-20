@@ -3,13 +3,19 @@
     class='jinbi' 
     style="background: url('{{urlHost}}img/jinbi2.png');background-size: cover;"
     bindtap="link_path"></view>
+  <view class="zhufutan" wx:if="{{purpleShow}}">
+    <view class="tan_kuang" style="background: url('{{urlHost}}img/tanchuang.png');background-size: 100% 100%;">
+      <icon type="clear" size="40" color="#F8C02E" bindtap="tankuang"/>
+      <view class="box_title">收到的祝福</view>
+      <view class="tan_li_box">{{zhuFuListValue}}</view>
+    </view>
+  </view>
   <image wx:if="{{muShow}}" class="mulian mu1" src="{{urlHost}}img/mu3.png" style='height:{{heightValue}}px;'></image>
   <image wx:if="{{muShow}}" class="mulian mu2" src="{{urlHost}}img/mu2.png" style='height:{{heightValue}}px;'></image>
   <view class="footer" wx:if='{{pageShow}}'>
     <text class="ani_text">︽ 向 ︽ 上 ︽ 滑 ︽ 动 ︽</text>
   </view>
   <swiper 
-
     indicator-color='#fff' 
     class="swiper_css" 
     vertical='true' 
@@ -25,13 +31,21 @@
             <view class="text_css text1" style='animation-name: text1;'>过</view>
             <view class="text_css text2" style='animation-name: text1;'>年</view>
             <view class="text_css text3" style='animation-name: text1;'>啦</view>
-            <view class="text_css text4">新年快乐</view>
-            <!-- <view class="cai_box" style='width: {{heightValue/6}}px;height: {{heightValue/6}}px;left: calc(50% - {{heightValue/9}}px);'></view> -->
+            <!-- 新年快乐白色背景 -->
             <view 
               class='hengfu' 
               style="top:{{heightValue/13}}px"
               wx:if="{{hengfuShow}}"></view>
+            <view class="text_css text4">新年快乐</view>
+            <image bindtap="shuJuPaiClick" class="shujupai" src="{{urlHost}}img/11.gif" style="top:{{heightValue/4}}px"></image>
+            <!-- 横幅 -->
+            <view class="text_css_anima">
+              <view>{{animaText}}</view>
+            </view>
+            <!-- 两只粉色老鼠 -->
             <image class="twoshu" src="{{urlHost}}img/twoshu.png"></image>
+            <!-- 弹窗 -->
+            <!-- 滑动图片滑块 -->
             <view class="box_footer" wx:if="{{true}}">
               <scroll-view 
                 class="div_box" 
@@ -111,22 +125,22 @@
         <view class="view_swiper" style="background: url('{{urlHost}}img/back1.jpg');background-size: cover;">
           <view class="kuang1" style="background: url('{{urlHost}}img/kuang1.png');background-size: cover;" wx:if="{{page3}}">
             <view style="font-size: 8vw;color: #ECD623;font-family: '华文行楷';font-weight: bold;">迎春</view>
-            <view style="margin:2vw 5vw 0 0;font-size: 5vw"><text style="font-size: 3.74vw;">笑口常开哦</text>☺☺☺</view>
+            <view style="margin:2vw 5vw 0 0;font-size: 5vw"><text style="font-size: 3.74vw;">新年好</text>☺☺☺</view>
             <view style="margin:2vw 12vw 0 0;font-size: 4vw">{{timeValue}} {{hourValue}}</view>
           </view>
           <image class="shu4" src="{{urlHost}}img/shu4.png"></image>
           <view wx:if='page3' class='zi_box_css'>
             <view class="zi1" style='animation-name: {{page3Animation}}'>
-              <view wx:for="{{verse1}}" wx:key="index">{{item}}</view>
+              <view wx:for="{{verse[0]}}" wx:key="index">{{item}}</view>
             </view>
             <view class="zi1 zi2" style='animation-name: {{page3Animation}}'>
-              <view wx:for="{{verse2}}" wx:key="index">{{item}}</view>
+              <view wx:for="{{verse[1]}}" wx:key="index">{{item}}</view>
             </view>
             <view class="zi1 zi3" style='animation-name: {{page3Animation}}'>
-              <view wx:for="{{verse3}}" wx:key="index">{{item}}</view>
+              <view wx:for="{{verse[2]}}" wx:key="index">{{item}}</view>
             </view>
             <view class="zi1 zi4" style='animation-name: {{page3Animation}}'>
-              <view wx:for="{{verse4}}" wx:key="index">{{item}}</view>
+              <view wx:for="{{verse[3]}}" wx:key="index">{{item}}</view>
             </view>
           </view>
         </view>

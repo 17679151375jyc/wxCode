@@ -4,11 +4,15 @@ const app = getApp();
 const backgroundAudioManager = wx.getBackgroundAudioManager();
 const urlHost = app.globalData.urlHost;
 const util = require('../../utils/util.js')
+const dataValue = require('../../utils/data.js').data
 Page({
   onReady: function (e) {
     this.audioCtx = wx.createAudioContext('myAudio')
   },
   data: {
+    animaText: '',
+    zhuFuListValue: '',
+    purpleShow: false,
     hengfuShow: false,
     muShow: true,
     timeValue: '',
@@ -17,11 +21,8 @@ Page({
     urlHost: urlHost,
     myAudio: {
       method: 'pause',
-    },    
-    verse1: '律转鸿钧佳气同', 
-    verse2: '肩摩毂击乐融融',
-    verse3: '不须迎向东郊去', 
-    verse4: '春在千门万户中',
+    },  
+    verse: [],
     listImg: [
       urlHost + 'img/' + 'nian1.jpg',
       urlHost + 'img/' + 'nian2.jpg',
@@ -40,6 +41,7 @@ Page({
       urlHost + 'img/' + 'nian4.jpg',
       urlHost + 'img/' + 'nian5.jpg',
     ],
+    zhuFuList: {},
     heightValue: app.globalData.heightValue,
     widthValue: 0,
     page2Animation: '',
@@ -55,6 +57,20 @@ Page({
     rightValue: 100,
     aniStatus: 'paused',
     yinStatus: false
+  },
+  shuJuPaiClick: function(e){//点击出现弹窗
+    let that = this;
+    let val = parseInt(Math.random() * 30 + 1); 
+    that.setData({
+      zhuFuListValue: that.data.zhuFuList[val].name,
+      purpleShow: true,
+    })
+  },
+  tankuang: function(e){//出现弹窗并获取随机一条祝福
+    let that = this;
+    that.setData({
+      purpleShow: false
+    })
   },
   imgClick: function (e){  //图片预览
     let that = this;
@@ -75,6 +91,7 @@ Page({
   yinClick: function(e){//点击播放
     let that = this;
     backgroundAudioManager.play();
+    console.log('执行了')
     that.setData({
       aniStatus: 'tunnong',
       yinStatus: false
@@ -92,7 +109,7 @@ Page({
       tiperShow: true
     })
   },
-  bindVideoplayClick1: function(e){
+  bindVideoplayClick1: function(e){//视频播放时暂停背景音乐
     this.yinyueClick()
   },
   bindVediopauseClick1: function (e) {
@@ -167,6 +184,7 @@ Page({
     // console.log(e.detail.scrollLeft)
   },
   onLoad: function () {
+    console.log(dataValue.animaText)
     let that = this;
     wx.getSystemInfo({
       success: function(res){
@@ -175,17 +193,13 @@ Page({
           widthValue: that.data.listImg.length * 33.333 + (that.data.listImg.length+1)
         })
           wx.playBackgroundAudio({//背景音乐
-            dataUrl: that.data.urlHost + 'mp3/juhao.mp3',
+            // dataUrl: that.data.urlHost + 'mp3/juhao.mp3',
             title: '句号',
             coverImgUrl: that.data.urlHost + 'img/juhao.jpg',
             success(res) {
               that.setData({
                 aniStatus: 'running'
               })
-            },
-            onEnded(){
-              console.log('从新来')          
-              backgroundAudioManager.play();
             }
           })
           that.setData({//播放器（废弃）
@@ -198,9 +212,13 @@ Page({
       setInterval(() => {
       let timeValue = util.formatTime('dateTime', new Date());
       let hourValue = util.formatTime('hourTime', new Date());
+      // 获取数据
       that.setData({
         timeValue: timeValue,
-        hourValue: hourValue
+        hourValue: hourValue,
+        animaText: dataValue.animaText,//移动的横幅文字
+        zhuFuList: dataValue.zhuFuList,//随机祝福
+        verse: dataValue.verse//诗句
       })
     }, 1000)
     setTimeout(()=>{

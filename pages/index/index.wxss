@@ -12,7 +12,7 @@
   width: 12vw;
   height: 12vw;
   border-radius: 50%;
-  top: 20%;
+  bottom: 65vw;
   right: -2vw;
   opacity: 0;
 }
@@ -28,6 +28,57 @@
   opacity: 0.7;
   animation: 3s linear infinite;
   animation-name: yinyue;
+}
+.shujupai{
+    position: absolute;
+    left: -6vw;
+    width: 20vw;
+    height: 20vw;
+    transform: rotate(35deg);
+}
+.tan_kuang{
+  width: 76%;
+  position: absolute;
+  padding: 5vw;
+  left: 8%;
+  top: 16%;
+  height: 90vw;
+}
+.tan_kuang icon{
+  position: absolute;
+  top: 6%;
+  right: 6%;
+}
+.tan_kuang .tan_li_box{
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  width: 78%;
+  max-height: 69vw;
+  border:0.5vw dashed #FCD268;
+  border-radius: 5vw;
+  padding: 2vw;
+  height: 60vw;
+  color: red;
+  font-size: 4.5vw;
+  overflow-y: auto; 
+  font-weight: bold;
+  letter-spacing: 0.6vw;
+  text-align: justify;
+}
+.box_title{
+  position: absolute;
+  width: 50vw;
+  height: 10vw;
+  text-align: center;
+  line-height: 10vw;
+  top: 12%;
+  left: calc(50% - 25vw);
+  font-family: bold;
+  color: #96700B;
+  font-size: 6.5vw;
+  letter-spacing: 0.5vw;
+
 }
 .tiper{
   position: absolute;

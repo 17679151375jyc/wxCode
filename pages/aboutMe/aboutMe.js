@@ -1,6 +1,7 @@
 // pages/aboutMe/aboutMe.js
 const app = getApp();
 const urlHost = app.globalData.urlHost;
+const dataValue = require('../../utils/data.js').data
 Page({
 
   /**
@@ -9,13 +10,17 @@ Page({
   data: {
     urlHost: urlHost,
     heightValue: app.globalData.heightValue,
+    aboutMeText: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this
+    that.setData({
+      aboutMeText: dataValue.aboutMeText
+    })
   },
 
   /**

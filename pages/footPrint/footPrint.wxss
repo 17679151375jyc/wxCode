@@ -37,7 +37,7 @@
   bottom: 0;
   left: 10%;
   width: 80%;
-  background-color: #D6E286;
+  background-color: #F8464C;
   border-radius: 2.7vw;
 }
 .list_css{
