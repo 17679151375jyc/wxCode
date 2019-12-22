@@ -1,0 +1,27 @@
+.view_box{
+  position: absolute;
+  top: 1vw;
+  right: 0;
+  width: 22vw;
+  background-color: rgba(1,164,26, 0.5);
+  border-top-left-radius: 2.7vw;
+  border-bottom-left-radius: 2.7vw;
+  padding: 2.7vw;
+}
+.duoxuan_box{
+  display: flex;
+  flex-direction: column;  
+}
+.duoxuan_label{
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 7vw;
+  margin-bottom: 3vw;
+  line-height: 7vw;
+  font-size: 3.27vw;
+}
+.duoxuan_label:last-child{
+  margin-bottom: 0;
+}

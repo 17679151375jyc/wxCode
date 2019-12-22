@@ -1,0 +1,13 @@
+<view>
+  <map 
+    id="map"
+    setting="{{setList}}" 
+    style="width: 100%; height: 100vh;"></map>
+    <view class="view_box">
+      <checkbox-group bindchange="checkboxChange" class='duoxuan_box'>
+        <label class="duoxuan_label" wx:for="{{viewList}}" wx:key="*this">
+          <checkbox value="{{item.status}}"/>{{item.name}}
+        </label>
+      </checkbox-group>
+    </view>
+</view>

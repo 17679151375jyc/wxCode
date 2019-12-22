@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/photoPage/myHomeMap/myHomeMap",
+    "pages/photoPage/photoPage",
     "pages/home/home",
     "pages/blessing/blessing",
     "pages/privacy/privacy",
-    "pages/photoPage/photoPage",
     "pages/footPrint/footPrint",
     "pages/aboutMe/aboutMe"
   ],

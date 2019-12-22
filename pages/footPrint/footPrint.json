@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "留下足迹",
+  "navigationBarBackgroundColor": "#F8464C",
+  "navigationBarTextStyle": "white"
 }

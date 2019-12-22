@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "菜单",
+  "navigationBarBackgroundColor": "#F4EBDA",
+  "navigationBarTextStyle": "black"
 }

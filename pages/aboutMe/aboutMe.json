@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "约我去玩",
+  "navigationBarBackgroundColor": "#951D27",
+  "navigationBarTextStyle": "white"
 }

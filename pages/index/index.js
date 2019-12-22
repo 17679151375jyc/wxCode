@@ -32,7 +32,6 @@ Page({
       urlHost + 'img/' + 'nian5.jpg',
     ],
     zhuFuList: {},
-    heightValue: app.globalData.heightValue,
     widthValue: 0,
     page2Animation: '',
     page3Animation: '',

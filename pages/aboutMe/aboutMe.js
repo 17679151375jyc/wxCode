@@ -10,16 +10,40 @@ Page({
   data: {
     urlHost: urlHost,
     heightValue: app.globalData.heightValue,
-    aboutMeText: ''
+    aboutMeText: '',
+    otherList: {},
+    purpleShow: false
   },
-
+  tankuang(){
+    this.setData({
+      purpleShow: false
+    })
+  },
+  imgClick(){
+    wx.previewImage({
+      current: urlHost + 'img/erweima.jpg', // 当前显示图片的http链接  
+      urls: [urlHost + 'img/erweima.jpg'] // 需要预览的图片http链接列表  
+    })
+  },
+  othercCick(e){
+    let that = this
+    let index = e.currentTarget.dataset.indexval
+    switch(+index){
+      case 0:
+        that.setData({
+          purpleShow: true
+        })
+        break;
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     let that = this
     that.setData({
-      aboutMeText: dataValue.aboutMeText
+      aboutMeText: dataValue.aboutMeText,
+      otherList: dataValue.otherList1
     })
   },
 

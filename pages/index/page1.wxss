@@ -111,9 +111,10 @@
 }
 .twoshu{
   position: absolute;
-  bottom: 50vw;
-  width: 90%;
-  left: 5%;
+  bottom: 55vw;
+  width: 50%;
+  left: 25%;
+  height: 36vw;
 }
 .box_footer{
   position: absolute;

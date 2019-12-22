@@ -1,5 +1,19 @@
 <view>
-  <view class="box_css" style="background: url('{{urlHost}}img/6.jpg');background-size: cover;height:{{heightValue}}px"></view>
-  <view class="meng_css" style="height: {{heightValue/1.5}}px">{{aboutMeText}}</view>
+  <view class="box_css" style="background: url('{{urlHost}}img/6.jpg');background-size: cover"></view>
+  <view class="meng_css" style="height: {{100/1.5}}vh">{{aboutMeText}}</view>
+  <view class="fenxiang">
+    <view class="box_footer_css" wx:for="{{otherList}}" bindtap="othercCick" wx:key="*this" data-indexval="{{index}}">
+      <image src="{{item.url}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="zhufutan" wx:if="{{purpleShow}}">
+    <view class="tan_kuang">
+      <icon type="clear" size="40" color="#951D27" bindtap="tankuang"/>
+      <image class="ma_css" src="{{urlHost}}img/erweima.jpg" bindtap="imgClick"></image>
+      <view class="footer_text_css">趣味情报</view>
+    </view>
+  </view>
+  
   <view class="footer">版权归:[余心]微信：17679151375jyc所有</view>
 </view>

@@ -95,7 +95,7 @@ let zhuFuList = {
 //关于的的秒速
 let aboutMeText = "本程序由本程序管理员自主开发，无任何商业盈利目的，谨以此小程序向各位亲朋好友拜个年并且索要个拜年话红包哈哈哈，需要借用次小程序的私聊我，如有图片侵权请联系删除。（在开发的过程中也感谢一些朋友的帮助，在这里表示感谢），祝大家新年快乐！"
 //移动的横幅文字
-let animaText = "___给你拜年啦！祝您在新的一年新里:前途平坦，兜里有款，甜长苦短，薪水翻番，好吃好穿，常有新欢，追求的路程越走越宽！"
+let animaText = "蒋__给你拜年啦！祝您在新的一年新里:前途平坦，兜里有款，甜长苦短，薪水翻番，好吃好穿，常有新欢，追求的路程越走越宽！"
 //四句诗
 let verse = [
   '律转鸿钧佳气同',
@@ -125,11 +125,53 @@ let textList = [
 // 滚动的图片组
 let listImg = [
   urlHost + 'img/' + 'nian1.jpg',
-  urlHost + 'img/' + 'nian2.jpg',
-  urlHost + 'img/' + 'nian3.jpg',
   urlHost + 'img/' + 'nian4.jpg',
   urlHost + 'img/' + 'nian5.jpg',
+  urlHost + 'img/' + 'nian2.jpg',
+  urlHost + 'img/' + 'nian3.jpg',
+  urlHost + 'img/' + 'nian6.jpg',
+  urlHost + 'img/' + 'nian7.jpg',
+  urlHost + 'img/' + 'nian8.jpg',
 ]
+let dateArray = [
+  ['不定','今天','明天','后天','大后天',''], 
+  ['不定','01点','02点','03点','04点','05点','06点','07点','08点','09点','10点','11点','12点',
+      '13点','14点','15点','16点','17点','18点','19点','20点','21点','22点','23点','00点',]
+]
+let dateArray1 = [
+  ['不定','今天','明天','后天','大后天',''], 
+  ['不定','01点','02点','03点','04点','05点','06点','07点','08点','09点','10点','11点','12点',
+      '13点','14点','15点','16点','17点','18点','19点','20点','21点','22点','23点','00点',]
+]
+let otherList = {
+  0:{
+   id: 0,
+   name: "联系我",
+   url: urlHost + 'img/dianhua.png' 
+  },
+  1:{
+    id: 1,
+    name: '我家在哪',
+    url: urlHost + 'img/ditu.png'
+  },
+  2:{
+    id: 2,
+    name: '获取微信',
+    url: urlHost + 'img/weixin.png' 
+  },
+  // 3:{
+  //   id: 3,
+  //   name: '其他',
+  //   url: urlHost + 'img/dianhua.png' 
+  // }
+}
+let otherList1 = {
+  0:{
+   id: 0,
+   name: "获取公众号",
+   url: urlHost + 'img/dingyue.png' 
+  }
+}
 module.exports.data = {
   zhuFuList,
   aboutMeText,
@@ -137,4 +179,8 @@ module.exports.data = {
   verse,
   textList,
   listImg,
+  dateArray,
+  dateArray1,
+  otherList,
+  otherList1
 };

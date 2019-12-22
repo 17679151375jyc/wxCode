@@ -1,1 +1,50 @@
-<view>该页面暂未开发</view>
+<view>
+  <view style="background: url('{{urlHost}}img/xiaxue.jpg');background-size: 100% 100%;" class="box">
+    <view class="header_css">
+      <view class="input_css">
+        <view class="lable_css">谁要约我:</view>
+        <input class="input" bindinput="bindinputNameClick" value="{{name}}" placeholder="输入你的名字"></input>
+      </view>
+      <view class="input_css">
+        <view class="lable_css">去哪玩:</view>
+        <input class="input" bindinput="bindinputAddressClick" value="{{addressName}}" placeholder="你要约我去哪玩"></input>
+      </view>
+      <view class="input_css">
+        <view class="lable_css">多少人:</view>
+        <input class="input" bindinput="bindinputNumClick" value="{{peopleNum}}" type="number" placeholder="一共多少人去玩"></input>
+      </view>
+      <view class="input_css">
+        <view class="lable_css">啥时候去:</view>
+        <picker range="{{dateArray}}" mode="multiSelector" value="{{[1,9]}}" bindchange="bindDate">
+          <view class="radio_css date_css" style="color:#{{colorVal}}">{{dateVal}}</view>
+        </picker>
+      </view>
+      <view class="input_css">
+        <view class="lable_css">有没有车:</view>
+        <!-- <input class="input"></input> -->
+        <radio-group class="radio_css" bindchange="radioChange">
+          <radio value="0" checked="true"><text>有车</text></radio>
+          <radio value="1"><text>没有</text></radio>
+        </radio-group>
+      </view>
+      <view class="input_css">
+        <view class="lable_css">玩到何时:</view>
+        <picker range="{{dateArray1}}" mode="multiSelector" value="{{[1,9]}}" bindchange="bindDate1">
+          <view class="radio_css date_css" style="color:#{{colorVal1}}">{{dateVal1}}</view>
+        </picker>
+      </view>
+      <view style="margin-top: 10vw">
+        <button type="primary" bindtap="butClick">提交</button>
+      </view>
+    </view>    
+    <view class="header_css footer_css">
+      <view class="box1_footer_css">你还想？</view>
+      <view class="box2_footer_css">
+        <view class="box_footer_css" wx:for="{{otherList}}" bindtap="othercCick" wx:key="*this" data-indexval="{{index}}">
+          <image src="{{item.url}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

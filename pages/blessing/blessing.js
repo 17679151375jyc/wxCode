@@ -10,7 +10,6 @@ Page({
     valueText: '',
     current: 0,
     urlHost: urlHost,
-    heightValue: app.globalData.heightValue,
     textList: []
   },
   xinClick: function(e){

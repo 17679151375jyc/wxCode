@@ -1,1 +1,91 @@
 /* pages/photoPage/photoPage.wxss */
+.box{
+  width: 100vw;
+  height: calc(100vh - 2vw);
+  padding-top: 2vw;
+}
+.header_css{
+  width: 84vw;
+  background-color: rgba(251, 251, 251, 0.6);
+  margin: 0 auto;
+  border-radius: 2vw;
+  padding: 3vw;
+}
+.input_css{
+  display: flex;
+  height: 12vw;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3vw;
+}
+.input_css .lable_css{
+  width: 25vw;
+  font-size: 4.8vw;
+  font-weight: bold;
+  color: #333;
+}
+.input_css .input{
+  width: 55vw;
+  height: 10vw;
+  outline: 0;
+  padding: 0 2vw;
+  border-radius: 0.27vw;
+  border-bottom: 1px solid #000;
+  text-align: right;
+}
+.radio_css{
+  width: 55vw;
+  height: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.date_css{
+  justify-content: flex-end;
+  border-bottom: 1px solid #000;
+  padding: 0 2vw;
+}
+.footer_css{
+  margin-top: 2vw;
+  /* height: 30vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.box1_footer_css{
+  margin-bottom: 5vw;
+  width: 100%;
+  height: 8vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+  font-size: 4.8vw;
+}
+.box2_footer_css{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box_footer_css{
+  width: 20vw;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 4vw;
+}
+.box_footer_css image{
+  width: 12vw;
+  height: 12vw;
+}
+.box_footer_css text{
+  color: #B1860D;
+  margin-top: 3vw;
+  font-size: 3.74vw;
+}

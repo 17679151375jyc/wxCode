@@ -33,14 +33,8 @@ App({
         }
       }
     })
-    wx.getSystemInfo({//获取设备窗口高度
-      success: function (res) {
-        that.globalData.heightValue = (res.safeArea.height - res.safeArea.top)
-      }
-    })
   },
   globalData: {
-    heightValue: 0,
     userInfo: null,
     // urlHost: 'http://172.31.1.204/',
     // urlHost: 'http://192.168.43.125:8080/'

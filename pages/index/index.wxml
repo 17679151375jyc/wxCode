@@ -10,8 +10,8 @@
       <view class="tan_li_box">{{zhuFuListValue}}</view>
     </view>
   </view>
-  <image wx:if="{{muShow}}" class="mulian mu1" src="{{urlHost}}img/mu3.png" style='height:{{heightValue}}px;'></image>
-  <image wx:if="{{muShow}}" class="mulian mu2" src="{{urlHost}}img/mu2.png" style='height:{{heightValue}}px;'></image>
+  <image wx:if="{{muShow}}" class="mulian mu1" src="{{urlHost}}img/mu3.png"></image>
+  <image wx:if="{{muShow}}" class="mulian mu2" src="{{urlHost}}img/mu2.png"></image>
   <view class="footer" wx:if='{{pageShow}}'>
     <text class="ani_text">︽ 向 ︽ 上 ︽ 滑 ︽ 动 ︽</text>
   </view>
@@ -20,7 +20,7 @@
     class="swiper_css" 
     vertical='true' 
     bindchange='bindchangeClick' 
-    style='height:{{heightValue}}px;background-color: rgba(246,3,3, 0.8);'>
+    style='background-color: rgba(246,3,3, 0.8);'>
 
     <block>
       <swiper-item class='abc'>
@@ -36,7 +36,7 @@
               class='hengfu' 
               wx:if="{{hengfuShow}}"></view>
             <view class="text_css text4">新年快乐</view>
-            <image bindtap="shuJuPaiClick" class="shujupai" src="{{urlHost}}img/11.gif" style="top:{{heightValue/4}}px"></image>
+            <image bindtap="shuJuPaiClick" class="shujupai" src="{{urlHost}}img/11.gif" style="top:25vh"></image>
             <!-- 横幅 -->
             <view class="text_css_anima">
               <view>{{animaText}}</view>
@@ -74,7 +74,7 @@
               class="cai2" 
               wx:if="{{page2}}" 
               src="{{urlHost}}img/cai2.png"></image>
-            <view class="scro" wx:if="{{page2}}" style="height:{{heightValue/2.8}}px">
+            <view class="scro" wx:if="{{page2}}" style="height:{{100/2.8}}vh">
               <swiper 
                 class="backImg" 
                 autoplay 
@@ -97,7 +97,7 @@
             </view>
             <video 
               id="myVideo" 
-              style="height:{{heightValue/3.6}}px;"
+              style="height:{{100/3.6}}vh;"
               class="myVideo_css"
               title="给您拜年啦"
               poster="{{urlHost}}img/juhao.jpg"

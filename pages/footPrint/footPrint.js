@@ -10,7 +10,6 @@ Page({
   data: {
     titleText: '点亮星星签到',
     titleColoe: '#CDCDCD',
-    heightValue: app.globalData.heightValue,
     urlHost: urlHost,
     imgFlag: false,
     imgFlag1: true,
