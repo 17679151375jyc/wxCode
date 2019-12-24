@@ -8,76 +8,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    titleText: '点亮星星签到',
-    titleColoe: '#CDCDCD',
-    urlHost: urlHost,
-    imgFlag: false,
-    imgFlag1: true,
-    xing2: '',
-    jia1: '',
-    listData: []
-  },
-  imageClick: function (e){
-    let that = this
-    that.setData({
-      xing2: 'xing2',
-      imgFlag: true,
-      jia1: 'jia1'
-    })
-    if (that.data.imgFlag1) {
-      wx.getUserInfo({
-        success: function (res) {
-          if (res.userInfo) {
-            console.log(res.userInfo)
-            let {
-              nickName,
-              avatarUrl,
-              gender
-            } = res.userInfo
-            let list = {
-              num: 1,
-              name: nickName,
-              pathImg: avatarUrl,
-              gender: gender,
-            }
-            console.log(list)
-            that.setData({
-              listData: that.data.listData.concat(list),
-              titleText: '欢迎你的到来',
-              titleColoe: '#FFAD01'
-            })
-            console.log(that.data.listData)
-          }
-        }
-      })
-    }
-    setTimeout(()=>{
-      that.setData({
-        xing2: '',
-        imgFlag1: false,
-        jia1: '',
-      })
-    }, 1000)
-
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this
-    setInterval(() => {
-      let time = util.formatTime('hourTime', new Date());
-      if (time == '00:00:00') {
-          that.setData({
-            imgFlag: false,
-            imgFlag1: true,
-            xing2: '',
-            jia1: '',
-            titleText: '点亮星星签到',
-            titleColoe: '#CDCDCD'
-          })
-      }
-    }, 1000)
+
   },
 
   /**

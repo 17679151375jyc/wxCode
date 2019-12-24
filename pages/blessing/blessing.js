@@ -1,7 +1,6 @@
 // pages/blessing/blessing.js
 const app = getApp();
 const urlHost = app.globalData.urlHost;
-const dataValue = require('../../utils/data.js').data
 Page({
   /**
    * 页面的初始数据
@@ -12,7 +11,7 @@ Page({
     urlHost: urlHost,
     textList: []
   },
-  xinClick: function(e){
+  xinClick: function(e){//页面切换
     let that = this;
     let index = e.currentTarget.dataset.num
     this.setData({
@@ -38,11 +37,14 @@ Page({
               pathUrl: avatarUrl,
               gender,
             }
-            console.log(list)
-            that.setData({
-              textList: that.data.textList.concat(list)
+            that.data.textList.unshift(list)
+            wx.setStorage({
+              key: 'textList',
+              data: that.data.textList,
+              success(res){
+                that.getList()
+              }
             })
-            console.log(that.data.textList)
           }
         },
         complete(err){
@@ -68,12 +70,12 @@ Page({
       })
     }
   },
-  qingClick: function(){
+  qingClick: function(){//清空
     this.setData({
       valueText: ''
     })
   },  
-  bindchangeClick: function(e){
+  bindchangeClick: function(e){//滑动切换
     let index = e.detail.current
     this.setData({
       current: index
@@ -84,11 +86,20 @@ Page({
    */
   onLoad: function (options) {
     let that = this
-    that.setData({
-      textList: dataValue.textList
+    that.getList()
+    
+  },
+  getList() {
+    let that = this
+    wx.getStorage({
+      key: 'textList',
+      success: function (res) {
+        that.setData({
+          textList: res.data
+        })
+      }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

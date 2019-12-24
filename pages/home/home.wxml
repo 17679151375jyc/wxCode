@@ -12,21 +12,21 @@
           <image src='{{urlHost}}/img/logo44.png'></image>
         </view>
       </navigator>
-      <navigator url="../footPrint/footPrint" open-type="navigate">
-        <view class="logo yanguan">
-          <image src='{{urlHost}}/img/logo22.png'></image>
-        </view>
-      </navigator>
-      <navigator url="../privacy/privacy" open-type="navigate">
-        <view class="logo liuxia">
-          <image src='{{urlHost}}/img/logo55.png'></image>
-        </view>
-      </navigator>
       <navigator url="../aboutMe/aboutMe" open-type="navigate">
-        <view class="logo guanyu">
+        <view class="logo yanguan">
           <image src='{{urlHost}}/img/logo33.png'></image>
         </view>
       </navigator>
+      <!-- <navigator url="../privacy/privacy" open-type="navigate">
+        <view class="logo liuxia">
+          <image src='{{urlHost}}/img/logo55.png'></image>
+        </view>
+      </navigator> -->
+      <!-- <navigator url="../footPrint/footPrint" open-type="navigate">
+        <view class="logo guanyu">
+          <image src='{{urlHost}}/img/logo22.png'></image>
+        </view>
+      </navigator> -->
     </view>
     <!-- <image class="apple" src="{{urlHost}}/img/apple.png"></image> -->
     <image class="shu3" src="{{urlHost}}/img/shu3.gif"></image>

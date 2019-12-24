@@ -37,7 +37,7 @@
   background-image:-webkit-linear-gradient(bottom,red,#fff,yellow); 
   -webkit-text-stroke: 1px yellow;  
   opacity: 0;
-  animation: 1s linear infinite;
+  animation: 3s linear infinite;
   animation-name: text4;
   animation-delay: 6.5s;
   animation-fill-mode: forwards;
@@ -49,8 +49,10 @@
 }
 @keyframes text4{
   0%{background-image:-webkit-linear-gradient(bottom,red,#fd8403,yellow); opacity: 1;transform: scale(1)}
-  50%{background-image:-webkit-linear-gradient(bottom,#fd8403,yellow,red); opacity: 1;transform: scale(1.2)}
-  100%{background-image:-webkit-linear-gradient(bottom,yellow,red,#fd8403); opacity: 1;transform: scale(1)}
+  25%{background-image:-webkit-linear-gradient(bottom,#fd8403,yellow,red); opacity: 1;transform: scale(1)}
+  50%{background-image:-webkit-linear-gradient(bottom,yellow,red,#fd8403); opacity: 1;transform: scale(1.1)}
+  75%{background-image:-webkit-linear-gradient(bottom,red,#fd8403,yellow); opacity: 1;transform: scale(1)}
+  100%{background-image:-webkit-linear-gradient(bottom,#fd8403,yellow,red); opacity: 1;transform: scale(1)}
 }
 .deng1_box{
   width: 35vw;

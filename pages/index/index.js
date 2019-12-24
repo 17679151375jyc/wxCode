@@ -49,7 +49,8 @@ Page({
   },
   shuJuPaiClick: function(e){//点击出现弹窗
     let that = this;
-    let val = parseInt(Math.random() * 30 + 1); 
+    let index = Object.keys(dataValue.zhuFuList).length
+    let val = parseInt(Math.random() * index + 1); 
     that.setData({
       zhuFuListValue: that.data.zhuFuList[val].name,
       purpleShow: true,
@@ -172,12 +173,46 @@ Page({
   bindscrollClick: function(e){ //主页图片滑块
     // console.log(e.detail.scrollLeft)
   },
+  getList(){
+    let dataList = {
+      0: { name: 'zhuFuList', value: dataValue.zhuFuList },
+      1: { name: 'aboutMeText', value: dataValue.aboutMeText },
+      2: { name: 'animaText', value: dataValue.animaText },
+      3: { name: 'verse', value: dataValue.verse },
+      4: { name: 'textList', value: dataValue.textList },
+      5: { name: 'listImg', value: dataValue.listImg },
+      6: { name: 'dateArray', value: dataValue.dateArray },
+      7: { name: 'dateArray1', value: dataValue.dateArray1 },
+      8: { name: 'otherList', value: dataValue.otherList },
+      9: { name: 'otherList1', value: dataValue.otherList1 }
+    }
+    for (let i = 0; i < Object.keys(dataList).length; i++){
+      wx.setStorage({
+        key: dataList[i].name,
+        data: dataList[i].value,
+      })
+    }
+    wx.setStorage({
+      key: 'pageShow',
+      data: true,
+    })
+  },
   onLoad: function () {
     let that = this;
+    wx.getStorage({
+      key: 'pageShow',
+      success: function (res) {
+        console.log(res.data)
+      },
+      complete: function(res){
+        if (!res.data) {
+          that.getList();
+        }
+      }
+    })
     wx.getSystemInfo({
       success: function(res){
         let num = dataValue.listImg.length
-        console.log(dataValue.listImg.length)
         that.setData({   
           animaText: dataValue.animaText,//移动的横幅文字
           zhuFuList: dataValue.zhuFuList,//随机祝福
@@ -186,12 +221,12 @@ Page({
           widthValue: num * 34.333 + 1, 
         })
           wx.playBackgroundAudio({//背景音乐
-            dataUrl: urlHost + 'mp3/juhao.mp3',
+            // dataUrl: urlHost + 'mp3/juhao.mp3',
             title: '句号',
             coverImgUrl: urlHost + 'img/juhao.jpg',
             success(res) {
               that.setData({
-                aniStatus: 'running'
+                // aniStatus: 'running'
               })
             }
           })
