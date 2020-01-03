@@ -93,9 +93,9 @@ let zhuFuList = {
   }
 }
 //关于的的秒速
-let aboutMeText = "本程序由本程序管理员自主开发，无任何商业盈利目的，谨以此小程序向各位亲朋好友拜个年并且索要个拜年话红包哈哈哈，需要借用次小程序的私聊我，如有图片侵权请联系删除。（在开发的过程中也感谢一些朋友的帮助，在这里表示感谢），祝大家新年快乐！"
+let aboutMeText = "本程序由本程序管理员自主开发，无任何商业盈利目的，谨以此小程序向各位亲朋好友拜个年并且索要个拜年话红包哈哈哈，如有图片侵权请联系删除。（在开发的过程中也感谢一些朋友的帮助，在这里表示感谢），祝大家新年快乐！"
 //移动的横幅文字
-let animaText = "蒋__给你拜年啦！祝您在新的一年新里:前途平坦，兜里有款，甜长苦短，薪水翻番，好吃好穿，常有新欢，追求的路程越走越宽！"
+let animaText = "祝你在新的一年新里:前途平坦，兜里有款，甜长苦短，薪水翻番，好吃好穿，常有新欢，追求的路程越走越宽！"
 //四句诗
 let verse = [
   '律转鸿钧佳气同',
@@ -124,14 +124,14 @@ let textList = [
 ]
 // 滚动的图片组
 let listImg = [
-  urlHost + 'img/' + 'nian1.jpg',
-  urlHost + 'img/' + 'nian4.jpg',
-  urlHost + 'img/' + 'nian5.jpg',
-  urlHost + 'img/' + 'nian2.jpg',
-  urlHost + 'img/' + 'nian3.jpg',
-  urlHost + 'img/' + 'nian6.jpg',
-  urlHost + 'img/' + 'nian7.jpg',
-  urlHost + 'img/' + 'nian8.jpg',
+  urlHost + 'img_index/' + 'nian1.jpg',
+  urlHost + 'img_index/' + 'nian4.jpg',
+  urlHost + 'img_index/' + 'nian5.jpg',
+  urlHost + 'img_index/' + 'nian2.jpg',
+  urlHost + 'img_index/' + 'nian3.jpg',
+  urlHost + 'img_index/' + 'nian6.jpg',
+  urlHost + 'img_index/' + 'nian7.jpg',
+  urlHost + 'img_index/' + 'nian8.jpg',
 ]
 let dateArray = [
   ['不定','今天','明天','后天','大后天',''], 
@@ -159,11 +159,11 @@ let otherList = {
     name: '获取微信',
     url: urlHost + 'img/weixin.png' 
   },
-  // 3:{
-  //   id: 3,
-  //   name: '其他',
-  //   url: urlHost + 'img/dianhua.png' 
-  // }
+  3:{
+    id: 3,
+    name: '我的家乡',
+    url: urlHost + 'img/xiu.png' 
+  }
 }
 let otherList1 = {
   0:{

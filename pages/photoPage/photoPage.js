@@ -91,6 +91,17 @@ Page({
             }
           })
           break;
+      case 3:
+        wx.navigateTo({
+          url: './myHomeDetail/myHomeDetail',
+          success() {
+            console.log('跳转到家乡页')
+          },
+          complete(err){
+            console.log(err)
+          }
+        })
+        break;
     }
   },
   bindDate: function(e){

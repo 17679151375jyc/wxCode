@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/photoPage/myHomeMap/myHomeMap",
+    "pages/photoPage/myHomeDetail/myHomeDetail",
     "pages/photoPage/photoPage",
     "pages/home/home",
     "pages/blessing/blessing",

@@ -25,11 +25,11 @@ Page({
     verse: [],
     listImg: [],
     listImg1: [
-      urlHost + 'img/' + 'nian1.jpg',
-      urlHost + 'img/' + 'nian2.jpg',
-      urlHost + 'img/' + 'nian3.jpg',
-      urlHost + 'img/' + 'nian4.jpg',
-      urlHost + 'img/' + 'nian5.jpg',
+      urlHost + 'page2/' + 'nian1.jpg',
+      urlHost + 'page2/' + 'nian2.jpg',
+      urlHost + 'page2/' + 'nian3.jpg',
+      urlHost + 'page2/' + 'nian4.jpg',
+      urlHost + 'page2/' + 'nian5.jpg',
     ],
     zhuFuList: {},
     widthValue: 0,
@@ -221,7 +221,7 @@ Page({
           widthValue: num * 34.333 + 1, 
         })
           wx.playBackgroundAudio({//背景音乐
-            // dataUrl: urlHost + 'mp3/juhao.mp3',
+            dataUrl: urlHost + 'mp3/juhao.mp3',
             title: '句号',
             coverImgUrl: urlHost + 'img/juhao.jpg',
             success(res) {

@@ -1,0 +1,21 @@
+<view class='box'>
+  <view class="box_div">
+    <view class="title">丰城市</view>
+    <text class="text_css">丰城于东汉建安十五年（210年）置县，时名富城县，晋太康元年（280年），移治丰水西，改名丰城县；</text>
+    <image style="width: 100%;margin:3vw auto;" src="{{urlHost}}img/city1.jpg"></image>
+    <text class="text_css">丰城原为干将、莫邪宝剑藏地，故又名“剑邑”，还是唐代六大青瓷名窑之一洪州窑的故乡，拥有剑文化、瓷文化、水文化、书院文化和古建筑文化等历史文化；孕育了徐孺子、雷焕、王季友、揭傒斯、邓子龙、夏征农等近现代名人。</text>
+    <image style="width: 100%;margin:3vw auto;" src="{{urlHost}}img/city3.jpg"></image>
+    <text class="text_css">丰城是全国主要粮食生产基地，江西省煤炭生产重要基地，江西省重点能源基地，享有“煤海粮仓金丰城”之称。 [3]  2015年8月22日，在第十五届全国“县域经济与县域基本竞争力百强县”上排名全国第78位。</text>
+    <image style="width: 100%;margin:3vw auto;" src="{{urlHost}}img/city2.jpg"></image>
+    <text class="text_css">丰城总面积2845平方公里，距南昌60公里、南昌昌北机场70公里。辖6个街道、20个镇、7个乡，2014年末，户籍人口148.77万；2015年，全市完成生产总值392亿元。境内以平原地形为主，占总面积88.5%，整个地势由西南向东北逐渐倾斜，可概括为“四山一水四分田，一分道路和庄园”。</text>
+    <image style="width: 100%;margin:3vw auto;" src="{{urlHost}}img/city4.jpg"></image>
+    <view class="title">秀市镇</view>
+    <text class="text_css">又叫秀才埠（bu）秀市历史悠久，源远流长。东汉建安15年（公元210年）建立的富城县，其县治就在秀市境内。历经秀市公社、秀市乡、1995年撤乡设镇。秀市被誉为“文献名区、人才渊薮”，历年历代都是人才辈出的地方。</text>
+    <image style="width: 100%;margin:3vw auto;" src="{{urlHost}}img/xiu2.jpg"></image>
+    <text class="text_css">晋代（公元317年）在丰城史载首任县令、丰城剑发现者雷焕、宋礼部尚书黄时若、明工部尚书雷礼、探花孙曰恭等80余位进士是秀市历史名人的杰出代表。</text>
+    <image style="width: 100%;margin:3vw auto;" src="{{urlHost}}img/xiu1.jpg"></image>
+    <text class="text_css">境内人文、自然景观资源丰富。自然景观有含秀湖、邓子龙岳母墓、古楠木群、中国道教第三十七佛地始丰山、古秀水桥、九桂坊等不胜枚举，美不胜收。</text>
+    <image style="width: 100%;margin:3vw auto;" src="{{urlHost}}img/xiu3.jpg"></image>
+    <view class="footer_css">以上图文摘自百度</view>
+  </view>
+</view>
