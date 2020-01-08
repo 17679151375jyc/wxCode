@@ -11,7 +11,7 @@
 .scro{
   position: absolute;
   width: 45vw;
-  top: 3%;
+  top: 10%;
   left: 20%;
   transform: rotate(-10deg);
   z-index: 210;

@@ -74,7 +74,7 @@
               class="cai2" 
               wx:if="{{page2}}" 
               src="{{urlHost}}img/cai2.png"></image>
-            <view class="scro" wx:if="{{page2}}" style="height:{{100/2.8}}vh">
+            <view class="scro" wx:if="{{page2}}" style="height:{{100/2.4}}vh">
               <swiper 
                 class="backImg" 
                 autoplay 
@@ -95,7 +95,7 @@
                 </block>
               </swiper>
             </view>
-            <video 
+            <!-- <video 
               id="myVideo" 
               style="height:{{100/3.6}}vh;"
               class="myVideo_css"
@@ -111,7 +111,7 @@
               enable-danmu
               bindplay='bindVideoplayClick1'
               bindpause="bindVediopauseClick1"
-              controls></video>
+              controls></video> -->
           </view>
           <image wx:if="{{page2}}" class="deng1_box" src="{{urlHost}}img/16.gif"></image>
           <image class="jupai" src="{{urlHost}}img/jupai.png"></image>

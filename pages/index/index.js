@@ -226,7 +226,7 @@ Page({
             coverImgUrl: urlHost + 'img/juhao.jpg',
             success(res) {
               that.setData({
-                // aniStatus: 'running'
+                aniStatus: 'running'
               })
             }
           })
