@@ -34,7 +34,7 @@
         </picker>
       </view>
       <view style="margin-top: 10vw">
-        <button type="primary" bindtap="butClick">提交</button>
+        <button type="primary" bindtap="butClick">保存</button>
       </view>
     </view>    
     <view class="header_css footer_css">
